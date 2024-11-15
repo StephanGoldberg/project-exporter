@@ -3,12 +3,21 @@
   "displayName": "Project Exporter for AI",
   "description": "Export your project in AI-friendly formats with one click. Perfect for ChatGPT, Claude, and GitHub Copilot!",
   "version": "1.0.0",
-  "publisher": "NtechSolutions",
-  "pricing": "Trial",
-  "icon": "images/icon.png",
-  "galleryBanner": {
-      "color": "#2d2d2d",
-      "theme": "dark"
+  "publisher": "StephanGoldberg",
+  "pricing": "Free",
+  "repository": {
+      "type": "git",
+      "url": "https://github.com/StephanGoldberg/project-exporter"
+  },
+  "bugs": {
+      "url": "https://github.com/StephanGoldberg/project-exporter/issues"
+  },
+  "sponsor": {
+      "url": "https://github.com/sponsors/StephanGoldberg"
+  },
+  "homepage": "https://github.com/StephanGoldberg/project-exporter#readme",
+  "engines": {
+      "vscode": "^1.80.0"
   },
   "categories": ["Other"],
   "keywords": [
@@ -17,5 +26,41 @@
       "Export",
       "Code Review",
       "Documentation"
-  ]
+  ],
+  "activationEvents": [
+      "onCommand:project-exporter.export",
+      "onCommand:project-exporter.quickExport"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+      "commands": [
+          {
+              "command": "project-exporter.export",
+              "title": "Export Project for AI"
+          },
+          {
+              "command": "project-exporter.quickExport",
+              "title": "Quick Export for AI"
+          }
+      ]
+  },
+  "scripts": {
+      "vscode:prepublish": "npm run compile",
+      "compile": "tsc -p ./",
+      "watch": "tsc -watch -p ./",
+      "lint": "eslint src --ext ts"
+  },
+  "devDependencies": {
+      "@types/vscode": "^1.80.0",
+      "@types/node": "^16.x",
+      "typescript": "^4.9.5",
+      "@typescript-eslint/parser": "^5.56.0",
+      "@typescript-eslint/eslint-plugin": "^5.56.0",
+      "eslint": "^8.36.0"
+  },
+  "icon": "images/icon.png",
+  "galleryBanner": {
+      "color": "#2d2d2d",
+      "theme": "dark"
+  }
 }
