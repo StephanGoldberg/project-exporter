@@ -1,0 +1,21 @@
+{
+  "name": "project-exporter",
+  "displayName": "Project Exporter for AI",
+  "description": "Export your project in AI-friendly formats with one click. Perfect for ChatGPT, Claude, and GitHub Copilot!",
+  "version": "1.0.0",
+  "publisher": "NtechSolutions",
+  "pricing": "Trial",
+  "icon": "images/icon.png",
+  "galleryBanner": {
+      "color": "#2d2d2d",
+      "theme": "dark"
+  },
+  "categories": ["Other"],
+  "keywords": [
+      "AI",
+      "ChatGPT",
+      "Export",
+      "Code Review",
+      "Documentation"
+  ]
+}
